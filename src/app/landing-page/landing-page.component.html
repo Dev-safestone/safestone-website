@@ -1,15 +1,19 @@
+
 <div class="header">
     <header>
         <div class="top">
             <img class="logo" style="height: 67px; width: 67px;" src="assets/logo.png">
-            <p class="company">SafeStone</p>
+            <p class="company"><span style="font-family: avenir-bold;">Safe</span>Stone</p>
             <div class="buttons">
-                <button mat-raised-button class="register"><b>Register</b></button>
-                <button mat-raised-button class="demo"><b>Get A Demo</b></button>
+                <!-- <button mat-raised-button class="register"><b>Register</b></button> -->
+                <button mat-raised-button (click)="redirectToDemo()" class="demo"><b>Get A Demo</b></button>
             </div>
         </div>
     </header>
+    
 </div>
+<hr>
+
 
 <div class="intro">
     <h1 class="tagline1"><i>Connectivity, safety and confidence at all times</i></h1>
@@ -21,12 +25,16 @@
     </div>
 </div>
 
+<div class="start-img-mobile">
+    <img src="/assets/start.svg" class="img">
+</div>
+
 <div class="hiw">
     <h1 class="hiw1">How it all works</h1>
     <div class="images-hiw">
         <img class="img1" src="assets/byosn.png" width="220px" height="320px" style="position: relative; padding-left: 60px;">
         <img class="img2" src="assets/cysc.png" width="300px" height="280px" style="position: relative;">
-        <img class="img2" src="assets/scws.png" width="300px" height="280px" style="position: relative;">
+        <img class="img3" src="assets/scws.png" width="300px" height="280px" style="position: relative;">
         <div class="col-desc">
             <div class="inside-head">
                 <h1 class="heading1">Build your own safety networks</h1>
@@ -50,10 +58,78 @@
     </div>
 
     <div class="mobile-hiw">
-        <mat-accordion>
-            <mat-expansion-panel hideToggle style="padding-top: 15px; padding-bottom: 15px;">
-                <mat-expansion-panel-header class="disable_ripple">
-                  <mat-panel-title style="font-family: avenir-normal; justify-content: center;">
+        <div class="hiw-container">
+            <div class="byosn-img">
+                <img src="assets/byosn1.svg" width="200px" height="320px">
+            </div>
+            <div class="byosn-card">
+                <mat-card class="byosn">
+                    <mat-card-header>
+                        <mat-card-title class="card-title">
+                        <b>Build your own safety networks</b>
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="card-content">
+                        Just like any other social networking platform like LinkedIn or Instagram, you can connect with your friends, family, colleagues, neighbours, etc. on the SafeStone app. The network built on SafeStone acts as a user's personal safety network that can be reached out to during emergency.
+
+                    </mat-card-content>
+
+                </mat-card>
+            </div>
+
+
+            <div class="byosn-img">
+                <img src="assets/cysc1.svg" width="300px" height="320px">
+            </div>
+            <div class="byosn-card">
+                <mat-card class="byosn">
+                    <mat-card-header>
+                        <mat-card-title class="card-title">
+                        <b>Create your SafeCircles</b>
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="card-content">
+                        Users can shortlist close friends and family into
+safe circles or safe groups from their safety
+network. Members of a Safe Circle can view
+each other's location in real time similar to
+Snapchat maps.
+
+                    </mat-card-content>
+
+                </mat-card>
+            </div>
+
+
+
+            <div class="byosn-img">
+                <img src="assets/scws1.svg" width="300px" height="300px">
+            </div>
+            <div class="byosn-card">
+                <mat-card class="byosn">
+                    <mat-card-header>
+                        <mat-card-title class="card-title">
+                        <b>Stay connected with SafeFeed</b>
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="card-content">
+                        SafeFeed is a social media-like feed that
+                        shows you updates from your circles, such
+                        as their latest check-ins or status updates.
+                        You can also discover new places to explore
+                        and share them with your circles.
+                    </mat-card-content>
+
+                </mat-card>
+            </div>
+
+        </div>
+        
+
+        <!-- <mat-accordion>
+            <mat-expansion-panel style="padding-top: 15px; padding-bottom: 15px;">
+                <mat-expansion-panel-header class="disable_ripple" style="background-color: #FBEFDA;">
+                  <mat-panel-title style="font-family: avenir-normal; justify-content: center; text-align: center;">
                     <b>Build your own safety networks</b>
                   </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -62,8 +138,8 @@
                     <img src="assets/byosn.png" width="200px" height="320px" style="justify-content: center;padding: 0px; margin-left: 50px;">
                 </div>
             </mat-expansion-panel>
-            <mat-expansion-panel hideToggle style="padding-top: 15px; padding-bottom: 15px;">
-                <mat-expansion-panel-header class="disable_ripple">
+            <mat-expansion-panel style="padding-top: 15px; padding-bottom: 15px;">
+                <mat-expansion-panel-header class="disable_ripple" style="background-color: #FBEFDA;">
                   <mat-panel-title style="font-family: avenir-normal; justify-content: center;">
                     <b>Create Your Own Safe Circles</b>
                   </mat-panel-title>
@@ -73,8 +149,8 @@
                     <img src="assets/cysc.png" width="300px" height="320px" style="justify-content: center;padding: 0px; margin-left: 0;">
                 </div>
             </mat-expansion-panel>
-            <mat-expansion-panel hideToggle style="padding-top: 15px; padding-bottom: 15px;">
-                <mat-expansion-panel-header class="disable_ripple">
+            <mat-expansion-panel style="padding-top: 15px; padding-bottom: 15px;">
+                <mat-expansion-panel-header class="disable_ripple" style="background-color: #FBEFDA;">
                   <mat-panel-title style="font-family: avenir-normal;justify-content: center;">
                     <b>Stay Connected with SafeFeed</b>
                   </mat-panel-title>
@@ -84,72 +160,92 @@
                     <img src="assets/scws.png" width="300px" height="300px" style="justify-content: center;padding: 0px; margin-left: 0;">
                 </div>
             </mat-expansion-panel>
-        </mat-accordion>
+        </mat-accordion> -->
     </div>
 
     
 </div> 
 
 <div class="features">
-    <h1 class="ftagline1">Features</h1>
-    <h1 class="ftagline2">Empowering Your Safety - Our Key Features</h1>
-    <div class="expandable-panels">
-        <mat-accordion>
-            <mat-expansion-panel class="panel1" [expanded]="true">
-                <mat-expansion-panel-header class="disable_ripple">
-                  <mat-panel-title style="font-family: avenir-normal; justify-content: center;">
-                    <b>Emergency SOS Alerts</b>
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="exp1">
-                    <p class="descexp1">With a single tap, alert the nearest members of your network based on your live location in emergencies. They receive your distress signal and real-time location, ensuring swift help. SafeStone is your personal safety net, offering peace of mind and immediate support when you need it most.</p>
-                    <img class="imgexp1" src="assets/sos.png" width="143px" height="320px" style="border-radius: 22px;">
-                </div>
-            </mat-expansion-panel>
-            <mat-expansion-panel class="panel2">
-                <mat-expansion-panel-header class="disable_ripple">
-                  <mat-panel-title style="font-family: avenir-normal; justify-content: center;">
-                    <b>Caution Mode</b>
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="exp2">
-                    <p class="descexp2">Caution Mode alerts your safe circles, keeping them informed when you need to exercise extra caution. Stay connected and supported wherever you go.</p>
-                    <img class="imgexp2" src="assets/caution.png" width="143px" height="320px" style="border-radius: 22px;">
-                </div>
-            </mat-expansion-panel>
-            <mat-expansion-panel class="panel3">
-                <mat-expansion-panel-header class="disable_ripple">
-                  <mat-panel-title style="font-family: avenir-normal; justify-content: center;">
-                    <b>Safety Ratings</b>
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="exp3">
-                    <p class="descexp3">Rate and share your safety experiences on SafeStone. Your feedback helps others make informed decisions about places they visit. Together, we create a safer community and promote awareness for a secure environment.</p>
-                    <img class="imgexp3" src="assets/safety.png" width="143px" height="320px" style="border-radius: 22px;">
-                </div>
-            </mat-expansion-panel>
-            <mat-expansion-panel class="panel4">
-                <mat-expansion-panel-header class="disable_ripple">
-                  <mat-panel-title style="font-family: avenir-normal; justify-content: center;">
-                    <b>SafeFeed</b>
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="exp4">
-                    <p class="descexp4">Safe Feed on SafeStone is an interactive platform that encourages open conversations about safety. Discover, share, and engage in discussions about all things safety-related. It's a welcoming space where ideas thrive, fostering a community dedicated to creating a safer world.</p>
-                    <img class="imgexp4" src="assets/scws2.png" width="143px" height="320px">
-                </div>
-            </mat-expansion-panel>
-            
-        </mat-accordion>
-        
-        
-
+    <h1 class="fmtagline1">Features</h1>
+    <h1 class="fmtagline2">Empowering Your Safety - Our Key Features</h1>
+    <div class="feature-desktop">
+      <div class="column-buttons">
+        <div class="expandable-cards">
+          <div class="feature-card-container" *ngFor="let feature of features; let i = index">
+            <button mat-button (click)="toggleFeature(i)" *ngIf="expandedFeatureIndex !== i" class="white-button" style="text-align: left;">{{ feature.title }}</button>
+            <mat-card *ngIf="expandedFeatureIndex === i" class="feature-card">
+              <div class="rectangle"></div>
+              <mat-card-header>
+                <mat-card-title class="card-title">
+                  <b>{{ feature.title }}</b>
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-content class="card-content">
+                {{ feature.details }}
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <div class="column-image">
+        <div class="feature-image">
+          <div class="background-image"></div> <!-- Background image container -->
+          <img [src]="selectedFeatureImage" alt="Relevant Image" class="img" *ngIf="selectedFeatureImage">
+        </div>
+      </div>
     </div>
-    
 </div>
-<div class="team" style="display: flex; justify-content: center;z-index: 0">
-    <h1 class="tag1" style="margin-top: 75px; font-size: 60px; font-family: avenir-bold; color: #FFF;">Our Team</h1>
+  
+
+<div class="mobile-features">
+
+    <h1 class="fmtagline1">Features</h1>
+    <h1 class="fmtagline2">Empowering Your Safety - Our Key Features</h1>
     
+    <div class="expandable-cards">
+        <div class="feature-image">
+            <div class="background-image"></div> <!-- Background image container -->
+            <img [src]="selectedFeatureImage" alt="Relevant Image" class="img" *ngIf="selectedFeatureImage">
+        </div>
+        <div class="feature-card-container" *ngFor="let feature of features; let i = index">
+            
+            <button mat-button (click)="toggleFeature(i)" *ngIf="expandedFeatureIndex !== i" class="white-button">{{feature.title}}</button>
+
+            <mat-card *ngIf="expandedFeatureIndex === i" class="feature-card">
+            <div class="rectangle"></div>
+              <mat-card-header>
+                <mat-card-title class="card-title">
+                  <b>{{ feature.title }}</b>
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-content class="card-content">
+                {{ feature.details }}
+              </mat-card-content>
+            </mat-card>
+          </div>
+    </div>
+</div>
+
+<div class="vision">
+    <div class="card">
+        <mat-card style="background-color:#FBEFDA;">
+            <mat-card-header>
+                <mat-card-title class="card-title">
+                  <b>Our <span style="color: #EF8329;">Vision</span> at SafeStone</b>
+                </mat-card-title>
+            </mat-card-header>
+            <br>
+              <mat-card-content class="card-content">
+                The vision of our app is to create a safer, more connected world. We believe that technology can be used for good, and we're committed to leveraging it to make a positive impact on society. Our vision is to create a platform that empowers users to build and maintain strong, safe, and supportive social networks. We aim to foster a community where people can connect with like-minded individuals, share safety tips, and stay up-to-date on the latest safety news. Our ultimate goal is to make the world a safer and more enjoyable place for everyone.
+              </mat-card-content>
+        </mat-card>
+    </div>
+
+</div>
+
+<div class="team" style="display: flex; justify-content: center;z-index: 0">
+    <h1 class="tag1" style="margin-top: 75px;font-family: avenir-bold; color: #FFF;">Our Team</h1>
 </div>
 <div class="cards">
     <mat-card class="binoy">
@@ -157,8 +253,7 @@
             <img class="img1" src="assets/binoy.svg" alt="Contact Image">         
         </mat-card-header>
         <br>
-        <mat-card-content class="content">
-            <div class="click1">
+        <div class="click1">
                 <a href="https://www.linkedin.com/in/adithyabinoy/">
                     <img src="assets/link.png">
                 </a>
@@ -167,35 +262,37 @@
                     <img src="assets/mail.png">
                 </a>
             </div>
+        <mat-card-content class="content">
             
             <mat-card-title style="font-family: avenir-bold;">Adithya Binoy</mat-card-title>
             <mat-card-subtitle style="font-family: avenir-normal;">CEO, Co-Founder</mat-card-subtitle>
-            <br>
-            <p style="font-size: 11px;text-align: center; font-family: avenir-normal;">With a passion for studying human behavior and enthusiasm in the D2C space, I started my first venture at 17, learning from that experience, I'm now taking my 2nd shot at challenging the status quo with SafeStone.</p>
+            <p style="font-size: 11px;text-align: center; font-family: avenir-normal; width: 250px;">With a passion for studying human behavior and enthusiasm in the D2C space, I started my first venture at 17, learning from that experience, I'm now taking my 2nd shot at challenging the status quo with SafeStone.</p>
 
         </mat-card-content>
     </mat-card>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <mat-card class="sarrah">
         <mat-card-header>
-            <img class="img2" src="assets/sarrah.png" alt="Contact Image">         
+            <img class="img2" src="assets/sarrah.png" alt="Contact Image">     
+                
         </mat-card-header>
+        
         <br>
+        <div class="click1">
+            <a href="https://www.linkedin.com/in/sarrahvohra/">
+                <img src="assets/link.png">
+            </a>
+            &nbsp;&nbsp;
+            <a href="mailto:sarrah.vohra@safestone.org">
+                <img src="assets/mail.png">
+            </a>
+        </div>
         <mat-card-content class="content1">
-            <div class="click1">
-                <a href="https://www.linkedin.com/in/sarrahvohra/">
-                    <img src="assets/link.png">
-                </a>
-                &nbsp;&nbsp;
-                <a href="mailto:sarrah.vohra@safestone.org">
-                    <img src="assets/mail.png">
-                </a>
-            </div>
             
             <mat-card-title style="font-family: avenir-bold;">Sarrah Vohra</mat-card-title>
             <mat-card-subtitle style="font-family: avenir-normal;">CMO, Co-Founder</mat-card-subtitle>
-            <br>
-            <p style="font-size: 11px;text-align: center; font-family: avenir-normal;">Passionate and driven, I constantly seek innovative ways to enhance our brand's presence through creative marketing strategies. With a versatile mindset, I embrace challenges and foster a positive, collaborative environment that empowers the team to achieve remarkable results.</p>
+            
+            <p style="font-size: 11px;text-align: center; font-family: avenir-normal; width: 250px;">Passionate and driven, I constantly seek innovative ways to enhance our brand's presence through creative marketing strategies. With a versatile mindset, I embrace challenges and foster a positive, collaborative environment that empowers the team to achieve remarkable results.</p>
 
         </mat-card-content>
     </mat-card>
@@ -206,20 +303,20 @@
             <img class="img3" src="assets/adi.svg" alt="Contact Image">         
         </mat-card-header>
         <br>
+        <div class="click2">
+            <a href="https://www.linkedin.com/in/aditya-naik-1049791b4/">
+                <img src="assets/link.png">
+            </a>
+            &nbsp;&nbsp;
+            <a href="mailto:aditya.naik@safestone.org">
+                <img src="assets/mail.png">
+            </a>
+        </div>
         <mat-card-content class="content2">
-            <div class="click2">
-                <a href="https://www.linkedin.com/in/aditya-naik-1049791b4/">
-                    <img src="assets/link.png">
-                </a>
-                &nbsp;&nbsp;
-                <a href="mailto:aditya.naik@safestone.org">
-                    <img src="assets/mail.png">
-                </a>
-            </div>
+            
             
             <mat-card-title style="font-family: avenir-bold;">Aditya Naik</mat-card-title>
             <mat-card-subtitle style="font-family: avenir-normal;">CTO, Co-Founder</mat-card-subtitle>
-            <br>
             <p style="font-size: 11px;text-align: center; font-family: avenir-normal;">Combining Technopreneurship, creative problem-solving, and strategic project management; You get me. I bring joyful enthusiasm to every endeavor, applying Design thinking at every stage. Part-time Industrial Engineer, Part-time Enterpreneur, and a full-time Turbo Panzer fanatic.</p>
 
         </mat-card-content>
@@ -258,8 +355,9 @@
        </div>
         <div class="privacy">
             <p style="font-family: avenir-bold;">SafeStone Pvt. Ltd ®</p>
-            <a style="text-decoration: none;" href="https://drive.google.com/file/d/1EC2k3xiOxv9GRhuYhyIkwmFWWZFdI7_k/view?usp=sharing"><p style="color: #EAECF0; font-family: avenir-bold;">Privacy Policy</p></a>
-            <a style="text-decoration: none;" href="https://drive.google.com/file/d/1N0LAXEdYuqbzfhGZFvZ-PMgwzkxkKpoC/view?usp=sharing"><p style="color: #EAECF0; font-family: avenir-bold;">Terms of Use</p></a>
+            <p (click)="openPrivacyPolicy()" style="color: #EAECF0; font-family: avenir-bold;">Privacy Policy</p>
+            <p (click)="openTerms()" style="color: #EAECF0; font-family: avenir-bold;">Terms of Use</p>
+            <!-- <a style="text-decoration: none;" href="https://drive.google.com/file/d/1N0LAXEdYuqbzfhGZFvZ-PMgwzkxkKpoC/view?usp=sharing"><p style="color: #EAECF0; font-family: avenir-bold;">Terms of Use</p></a> -->
 
         </div>
     </div>
@@ -294,8 +392,8 @@
        </div>
         <div class="privacy">
             <p style="font-family: avenir-bold;">SafeStone Technologies Pvt. Ltd ®</p>
-            <a style="text-decoration: none;" href="https://drive.google.com/file/d/1EC2k3xiOxv9GRhuYhyIkwmFWWZFdI7_k/view?usp=sharing"><p style="color: #EAECF0; font-family: avenir-bold;">Privacy Policy</p></a>
-            <a style="text-decoration: none;" href="https://drive.google.com/file/d/1N0LAXEdYuqbzfhGZFvZ-PMgwzkxkKpoC/view?usp=sharing"><p style="color: #EAECF0; font-family: avenir-bold;">Terms of Use</p></a>
+            <p (click)="openPrivacyPolicyMobile()" style="color: #EAECF0; font-family: avenir-bold;">Privacy Policy</p>
+            <p (click)="openTermsMobile()" style="color: #EAECF0; font-family: avenir-bold;">Terms of Use</p>
 
         </div>
     </div>

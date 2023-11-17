@@ -1,9 +1,14 @@
 .header{
+    
+    position: sticky;
+    top: 0;
+    z-index: 2147483647;
+    background-color: #fff;
     .top{
         
         margin-left: 40px;
         
-        padding: 20px;
+        padding-top: 20px;
         display: flex;
         flex-direction: row;
         flex: auto;
@@ -13,7 +18,7 @@
             padding-top: 20px;
             padding-left: 10px;
             color: #2B2929;
-            font-family: avenir-bold;
+            font-family: avenir-normal;
             font-size: 36px;
             font-style: normal;
             font-weight: 800;
@@ -51,9 +56,14 @@
     }
    
 }
-
+.start-img-mobile{
+    display: none;
+}
 .intro{
-    
+    // background: url("/assets/bgstart.png") no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    background-color: #FDFAF8;
     display: flex;
     flex-direction: column;
     flex: auto;
@@ -114,21 +124,26 @@
 }
 
 .hiw{    
+    
     display: flex;
     flex-direction: column;
     flex: auto;
     font-family: avenir-normal;
     align-items: center;
-    background-image: url("/safestone-main/src/assets/hiwback.png");
+    background-image: url("/assets/hiwback.png") ;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 20%;
+    
     .hiw1{
         margin-top:75px;
-        font-size: 60px;
+        font-size: 40px;
         font-family: avenir-bold;
         color: #EF8329;
     }
     .images-hiw{
         
-        
+        position: static;
         justify-content: center;
         align-items: center;
         
@@ -138,9 +153,22 @@
         flex-wrap: wrap;
         // justify-content: center;
         margin-top: 20px;
-        gap: 150px;
+        //gap: 150px;
         //margin-left: 75px;
-        
+        .img1{
+            padding-left: 30px;
+            padding-right: 100px;
+        }
+
+        .img2{
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .img3{
+            padding-left: 70px;
+            padding-right: 0;
+        }
         .col-desc{
             align-items: center;
             .inside-head{
@@ -218,110 +246,159 @@
     }
     
 }
-
+.mobile-features{display: none;}
 .features{
-    padding-bottom: 550px;
-    //max-height: 300px;
-    display: flex;
-    flex: auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+        //background-image: url('/assets/features-mobile.svg');
+        .fmtagline1{
+            font-size: 40px;
+            font-family: avenir-bold;
+            text-align: center;
+            color: #EF8329;
+            
+        }
+        .fmtagline2{
+            text-align: center;
+            font-family: avenir-normal;
+            font-size: 18px;
+        }
 
-    .ftagline1{
-        padding-top:75px;
-        font-size: 60px;
-        font-family: avenir-bold;
-        text-align: center;
-        color: #EF8329;
-    }
-    .ftagline2{
-        text-align: center;
-        padding-top: 30px;
-        font-family: avenir-normal;
-        font-size: 27px;
-    }
-    .expandable-panels{
+        .rectangle {
+            width: 5px; /* Width of the vertical rectangle */
+            height: 90px; /* Height of the vertical rectangle */
+            background-color: #EF8329; /* Color of the vertical rectangle */
+            position: absolute; /* Position absolute for precise placement */
+            left: 0; /* Position the rectangle on the left side of the card */
+            top: 0; /* Position the rectangle at the top of the card */
+          }
+          
+
+        .feature-desktop{
+            padding-top: 30px;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            flex: auto;
+            .expandable-cards{
+                padding-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+                flex: auto;
+                align-items: center;
+                justify-content: center;
+                
+                .white-button{
+                    padding: 20px;
+                    font-family: avenir-bold;
+                    font-size: 20px;
+    
+                }
+                .feature-card{
+                    
+                    background-color: #FFA24B36;
+                    box-shadow: none;
+                    width: 334px;
+                    height: 195px;
+                    .card-title{
+                        font-family: avenir-normal;
+                        font-size: 20px;
+                    }
+                    .card-content{
+                        text-align: left;
+                        font-family: avenir-normal;
+                        font-size: 12px;
+                    }
+                }
+                .close-button {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: none;
+                }
+            }
+            .feature-image{
+                padding-left: 180px;
+                //text-align: center;
+                .img{
+                    border-radius: 22px;
+                    width: 143px;
+                    height: 320px;
+                    padding-bottom: 15px;
+                }
+                // .background-image {
+                //     background-image: url('/assets/features-desktop.svg/');
+                //     background-size: cover;
+                //     //background-position: center;
+                //     position: absolute;
+                //     // top: 0;
+                //     // left: 0;
+                //     right: 30%;
+                //     width: 200px;
+                //     height: 200px;
+                //     z-index: -1;
+                //   }
+                 
+                
+                
+            }
+        }
+   
+}
+
+.vision{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-left: 500px;
+        padding-right: 500px;
+        flex: auto;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         
-        box-sizing: border-box;
-        justify-items: center;
-        //padding-left: 80px;
-        height: 211px;
-        width: 800px;
-        .mat-expansion-panel:not([class*='mat-elevation-z']) {
-            box-shadow: none;
-        }
-        .disable_ripple:hover{
+        .card{
+            width: 600px;
             background-color: #FBEFDA;
-        }
-        .panel1{
-            padding-top: 15px; padding-bottom: 15px;
-            .exp1{
-                display: flex; flex: auto; flex-direction: row;
-                .descexp1{
-                    font-family: avenir-normal; padding-top: 10px;
-                }
-                .imgexp1{
-                    padding: 10px; margin-left: 100px;
-                }
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .card-title{
+                align-items: center;
+                line-height: 55px;
+                text-align: center;
+                font-size: 50px;
+                font-family: avenir-bold;
             }
-            
-        }
-        .panel2{
-            padding-top: 15px; padding-bottom: 15px;
-            .exp2{
-                display: flex; flex: auto; flex-direction: row;
-                .descexp2{
-                    font-family: avenir-normal; padding-top: 10px;
-                }
-                .imgexp2{
-                    padding: 10px; margin-left: 100px;
-                }
+            .card-content{
+                font-family: avenir-normal;
+                text-align: center;
+                font-size: 15px;
+                line-height: 20px;
             }
-            
-           
         }
-        .panel3{
-            padding-top: 15px; padding-bottom: 15px;
-            .exp3{
-                display: flex; flex: auto; flex-direction: row;
-                .descexp3{
-                    font-family: avenir-normal; padding-top: 10px;
-                }
-                .imgexp3{
-                    padding: 10px; margin-left: 100px;
-                }
-            }
-           
-        }
-        .panel4{
-            
-            padding-top: 15px; padding-bottom: 15px;
-            .exp4{
-                display: flex; flex: auto; flex-direction: row;
-                .descexp4{
-                    font-family: avenir-normal; padding-top: 10px;
-                }
-                .imgexp4{
-                    padding: 10px; margin-left: 100px;
-                }
-            }
-            
-        }
-    }
 }
 
 .team{
+    z-index: 9999;
     display: flex;
     flex-direction: row;
     flex: auto;
-    //padding-left: 80px;
-    //margin-top: 500px;
     background-color: #EF8329;
     align-items: center;
+    text-align: center;
+    .tag1{
+        font-size: 40px;
+        text-align: center;
+    }
 }
 .cards{
-    background: url("file:///safestone-main/src/assets/bg.png") no-repeat center center fixed, #EF8329;
+    background: url("/assets/bg.png") no-repeat #EF8329;
+    background-position: right;
     
     display: flex;
     flex-direction: row;
@@ -482,11 +559,24 @@
     }
   
     .header .top .buttons {
-        display: none;
+        display:flex;
         max-width: 100%;
         flex-direction: column;
         align-items: center;
         font-size: 10px;
+    }
+
+    .start-img-mobile{
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+        align-items: center;
+        .img{
+            
+            // text-align: center;
+            width: 200px;
+            height: 320px;
+        }
     }
 
     .intro{
@@ -502,12 +592,14 @@
 
         }
         .tagline2{
+            text-align: center;
             max-width:80%;
             font-size: 15px;
             justify-content: center;
         }
         
         .tagline3{
+            text-align: center;
             font-size: 15px;
         }
         .tagline4{
@@ -521,6 +613,7 @@
     }
 
     .hiw{
+        background-size: 60%;
         overflow-x: hidden;
         .hiw1{
             font-size: 20px;
@@ -530,109 +623,245 @@
 
         }
         .mobile-hiw{
-            display: block;
-            .mat-expansion-panel:not([class*='mat-elevation-z']){
-                box-shadow: none;
-                padding: 100px;
-                .mat-panel-title{
-                    font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            flex: auto;
+            padding-bottom: 40px;
+            .hiw-container{
+                .byosn-img{
+                    padding: 20px;
+                    text-align: center;
+                    z-index: 2;
+                    position: relative;
+                    bottom: 30%;
+                }
+                .byosn-card{
+                    flex: auto;
+                    flex-direction: column;
+                    display: flex;
+                    
+                    .byosn{
+                        width: 334px;
+                        height: 195px;
+                        background-color: #FFECE1;
+                        align-items: center;
+                        .card-title{
+                            color: #EF8329;
+                            font-family: avenir-bold;
+                            font-size: 14px;
+                            
+                        }
+                        .card-content{
+                            text-align: center;
+                            font-family: avenir-normal;
+                            font-size: 10px;
+                        }
+                    }
                 }
             }
-            .disable_ripple:hover{
-                background-color: #FBEFDA;
-            }
-        }
-        .inside-head{
-            display: none;
-            
-        }
-        .inside-desc{
-            display:none;
         }
     }
 
     .features{
-        overflow-x: hidden;
-        padding-bottom: 50px;
-        .ftagline1{
-            font-size: 20px;
-        }
-        .ftagline2{
-            font-size: 13px;
-            padding-top: 0;
-        }
-        .expandable-panels{
-            height: 50%;
-            width: 90%;
-            .panel1{
-                padding-top: 0;
-                padding-bottom: 0;
-                .exp1{
+        display: none;
+        // background-image: url("/assets/hiwback.png") ;
+        // background-repeat: no-repeat;
+        // background-position: right;
+        // background-size: 20%;
+        
+        // overflow-x: hidden;
+        // padding-bottom: 50px;
+        // .ftagline1{
+        //     font-size: 20px;
+        // }
+        // .ftagline2{
+        //     font-size: 13px;
+        //     padding-top: 0;
+        // }
+        // .expandable-panels{
+        //     height: 50%;
+        //     width: 90%;
+        //     .panel1{
+        //         padding-top: 0;
+        //         padding-bottom: 0;
+        //         .exp1{
                    
-                    flex-direction: column;
-                    .descexp1{
-                        font-size: 10px;
-                    }
-                    .imgexp1{
-                        margin-left: 25%;
-                        justify-content: center;
-                    }
-                }
+        //             flex-direction: column;
+        //             .descexp1{
+        //                 font-size: 10px;
+        //             }
+        //             .imgexp1{
+        //                 margin-left: 25%;
+        //                 justify-content: center;
+        //             }
+        //         }
 
-            }
+        //     }
 
-            .panel2{
-                padding-top: 0;
-                padding-bottom: 0;
-                .exp2{
-                    flex-direction: column;
-                    .descexp2{
-                        font-size: 10px;
-                    }
-                    .imgexp2{
-                        margin-left: 25%;
-                        justify-content: center;
-                    }
-                }
+        //     .panel2{
+        //         padding-top: 0;
+        //         padding-bottom: 0;
+        //         .exp2{
+        //             flex-direction: column;
+        //             .descexp2{
+        //                 font-size: 10px;
+        //             }
+        //             .imgexp2{
+        //                 margin-left: 25%;
+        //                 justify-content: center;
+        //             }
+        //         }
 
-            }
+        //     }
 
-            .panel3{
-                padding-top: 0;
-                padding-bottom: 0;
-                .exp3{
-                    flex-direction: column;
-                    .descexp3{
-                        font-size: 10px;
-                    }
-                    .imgexp3{
-                        margin-left: 25%;
-                        justify-content: center;
-                    }
-                }
+        //     .panel3{
+        //         padding-top: 0;
+        //         padding-bottom: 0;
+        //         .exp3{
+        //             flex-direction: column;
+        //             .descexp3{
+        //                 font-size: 10px;
+        //             }
+        //             .imgexp3{
+        //                 margin-left: 25%;
+        //                 justify-content: center;
+        //             }
+        //         }
 
-            }
-            .panel4{
-                padding-top: 0;
-                padding-bottom: 0;
-                .exp4{
-                    flex-direction: column;
-                    .descexp4{
-                        font-size: 10px;
-                    }
-                    .imgexp4{
-                        margin-left: 25%;
-                        justify-content: center;
-                    }
-                }
+        //     }
+        //     .panel4{
+        //         padding-top: 0;
+        //         padding-bottom: 0;
+        //         .exp4{
+        //             flex-direction: column;
+        //             .descexp4{
+        //                 font-size: 10px;
+        //             }
+        //             .imgexp4{
+        //                 margin-left: 25%;
+        //                 justify-content: center;
+        //             }
+        //         }
 
-            }
-        }
+        //     }
+        // }
 
 
     }
+    .mobile-features{
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+        //background-image: url('/assets/features-mobile.svg');
+        .fmtagline1{
+            font-size: 20px;
+            font-family: avenir-bold;
+            text-align: center;
+            color: #EF8329;
+            
+        }
+        .fmtagline2{
+            text-align: center;
+            font-family: avenir-normal;
+            font-size: 15px;
+        }
+
+        .rectangle {
+            width: 5px; /* Width of the vertical rectangle */
+            height: 90px; /* Height of the vertical rectangle */
+            background-color: #EF8329; /* Color of the vertical rectangle */
+            position: absolute; /* Position absolute for precise placement */
+            left: 0; /* Position the rectangle on the left side of the card */
+            top: 0; /* Position the rectangle at the top of the card */
+          }
+          
+
+        .expandable-cards{
+            padding-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            flex: auto;
+            align-items: center;
+            justify-content: center;
+            .feature-image{
+                text-align: center;
+                .img{
+                    border-radius: 22px;
+                    width: 143px;
+                    height: 320px;
+                    padding-bottom: 15px;
+                }
+                .background-image {
+                    background-image: url('/assets/features-mobile.svg/');
+                    background-size: cover;
+                    background-position: center;
+                    position: absolute;
+                    // top: 0;
+                    // left: 0;
+                    left: 15%;
+                    width: 300px;
+                    height: 300px;
+                    z-index: -1;
+                  }
+                
+                
+            }
+            .white-button{
+                font-family: avenir-bold;
+                font-size: 13px;
+
+            }
+            .feature-card{
+                
+                background-color: #FFA24B36;
+                box-shadow: none;
+                width: 334px;
+                height: 195px;
+                .card-title{
+                    font-family: avenir-normal;
+                    font-size: 13px;
+                }
+                .card-content{
+                    font-family: avenir-normal;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    .vision{
+        padding-top: 40px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        flex: auto;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .card{
+            width: 300px;
+            background-color: #FBEFDA;
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .card-title{
+                line-height: 27.5px;
+                text-align: center;
+                font-size: 25px;
+                font-family: avenir-bold;
+            }
+            .card-content{
+                font-family: avenir-normal;
+                text-align: center;
+                font-size: 10px;
+            }
+        }
+    }
 
     .team{
+        font-size: 20px;
         overflow-x: hidden;
         flex-direction: column;
         align-items: center;

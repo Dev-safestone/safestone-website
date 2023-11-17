@@ -9,12 +9,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { DialogComponentComponent } from './dialog-component/dialog-component.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { TermsComponent } from './terms/terms.component';
+import { PrivacyMobileComponent } from './privacy-mobile/privacy-mobile.component';
+import { TermsMobileComponent } from './terms-mobile/terms-mobile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    DialogComponentComponent
+    DialogComponentComponent,
+    PrivacyComponent,
+    TermsComponent,
+    PrivacyMobileComponent,
+    TermsMobileComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +34,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatExpansionModule,
     MatCardModule,
     MatDialogModule,
+    MatIconModule,
+    PdfViewerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
